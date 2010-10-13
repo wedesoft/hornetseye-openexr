@@ -15,6 +15,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 #include "rubyinc.hh"
 #include "openexrinput.hh"
+#include "openexroutput.hh"
 
 #ifdef WIN32
 #define DLLEXPORT __declspec(dllexport)
@@ -34,6 +35,7 @@ extern "C" {
     rb_require( "hornetseye_frame" );
     VALUE mHornetseye = rb_define_module( "Hornetseye" );
     OpenEXRInput::registerRubyClass( mHornetseye );
+    OpenEXROutput::registerRubyClass( mHornetseye );
     rb_require( "hornetseye_openexr_ext.rb" );
   }
 

@@ -1,4 +1,4 @@
-# hornetseye-openexr - Loading and saving images using OpenEXR
+# hornetseye-rmagick - RMagick integration for Hornetseye
 # Copyright (C) 2010 Jan Wedekind
 #
 # This program is free software: you can redistribute it and/or modify
@@ -13,7 +13,34 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-require 'hornetseye-openexr/openexrinput'
-require 'hornetseye-openexr/openexroutput'
-require 'hornetseye-openexr/node'
-require 'hornetseye-openexr/multiarray'
+module Hornetseye
+
+  class Node
+
+    def save_openexr( file )
+      output = OpenEXROutput.new file
+      output.write self
+      output.close
+      self
+    end
+
+    def save_sfloat( file )
+      to_type( SFLOAT ).save_openexr file
+    end
+
+    def save_dfloat( file )
+      to_type( DFLOAT ).save_openexr file
+    end
+
+    def save_sfloatrgb( file )
+      to_type( SFLOATRGB ).save_openexr file
+    end
+
+    def save_dfloatrgb( file )
+      to_type( DFLOATRGB ).save_openexr file
+    end
+
+  end
+
+end
+
