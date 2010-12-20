@@ -44,11 +44,8 @@ module Hornetseye
      alias_method :orig_write, :write
 
      def write( frame )
-       if frame.rgb?
-         orig_write frame.to_type( SFLOATRGB )
-       else
-         orig_write frame.to_type( SFLOAT )
-       end
+       target = frame.rgb? ? SFLOATRGB : SFLOAT
+       orig_write frame.to_type( target ).memorise
      end
 
      def close
