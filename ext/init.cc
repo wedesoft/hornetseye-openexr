@@ -31,8 +31,8 @@ extern "C" {
 
   void Init_hornetseye_openexr(void)
   {
-    rb_require( "multiarray" );
-    rb_require( "hornetseye_frame" );
+    rb_eval_string( "require 'multiarray'" );
+    rb_eval_string( "require 'hornetseye_frame'" );
     VALUE mHornetseye = rb_define_module( "Hornetseye" );
     OpenEXRInput::registerRubyClass( mHornetseye );
     OpenEXROutput::registerRubyClass( mHornetseye );
