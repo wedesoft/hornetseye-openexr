@@ -14,7 +14,7 @@ Installation
 ------------
 *hornetseye-openexr* requires the OpenEXR development headers. If you are running Debian or (K)ubuntu, you can install them like this:
 
-    $ sudo aptitude install libopenexr-dev
+    $ sudo aptitude install libopenexr-dev libswscale-dev libboost-dev
 
 To install this Ruby extension, use the following command:
 
