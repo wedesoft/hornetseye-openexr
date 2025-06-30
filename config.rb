@@ -19,4 +19,4 @@ DESCRIPTION = %q{This Ruby extension provides reading and writing high dynamic r
 LICENSE = 'GPL-3+'
 AUTHOR = %q{Jan Wedekind}
 EMAIL = %q{jan@wedesoft.de}
-HOMEPAGE = %q{http://wedesoft.github.com/hornetseye-openexr/}
+HOMEPAGE = %q{http://wedesoft.github.io/hornetseye-openexr/}
