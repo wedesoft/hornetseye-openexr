@@ -1,7 +1,7 @@
 require 'rake'
 
 PKG_NAME = 'hornetseye-openexr'
-PKG_VERSION = '1.0.2'
+PKG_VERSION = '1.0.3'
 CFG = RbConfig::CONFIG
 CXX = ENV[ 'CXX' ] || 'g++'
 RB_FILES = ['config.rb'] + FileList[ 'lib/**/*.rb' ]
